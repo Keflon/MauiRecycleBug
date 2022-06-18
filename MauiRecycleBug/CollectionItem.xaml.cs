@@ -15,12 +15,12 @@ public partial class CollectionItem : ContentView
         InstanceId = ++CreatedCount;
 		InitializeComponent();
 
-		Debug.WriteLine($"Created CollectionItem. InstanceId: {CreatedCount}. There are {CreatedCount-CollectedCount} instances allocated");
+		Debug.WriteLine($"Created CollectionItem. InstanceId: {InstanceId}. There are {CreatedCount-CollectedCount} instances allocated");
     }
 
 	~CollectionItem()
 	{
-		Debug.WriteLine($"Collected CollectionItem. InstanceId: {CreatedCount}. There are {CreatedCount - CollectedCount} instances allocated");
+		Debug.WriteLine($"Collected CollectionItem. InstanceId: {InstanceId}. There are {CreatedCount - CollectedCount} instances allocated");
         CollectedCount++;
     }
 }
